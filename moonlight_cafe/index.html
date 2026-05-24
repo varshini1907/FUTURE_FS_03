@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Moonlight Café</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>Moonlight Café</h1>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+    <a href="#cart" id="cart-link">
+  Cart 🛒 (<span id="cart-count">0</span>)
+</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h2>Welcome to Moonlight Café</h2>
+
+      <p>
+        Fresh Coffee • Cozy Nights • Beautiful Moments
+      </p>
+
+      <button id="menuBtn">
+        Explore Menu
+      </button>
+
+    </div>
+
+  </section>
+<!-- MENU -->
+
+<section id="menu">
+
+  <h2 class="title">Our Menu</h2>
+
+  <!-- COFFEE -->
+
+  <h2 class="category-title">Coffee</h2>
+
+  <div class="menu-container">
+
+    <div class="card">
+
+      <img src="images/coffee1.jpeg">
+
+      <h3>Cappuccino</h3>
+
+      <p>
+        Rich espresso with creamy milk foam.
+      </p>
+
+      <h4>₹199</h4>
+
+      <button onclick="addToCart('Cappuccino',199)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/coffee2.jpeg">
+
+      <h3>Cold Coffee</h3>
+
+      <p>
+        Refreshing iced coffee with chocolate flavor.
+      </p>
+
+      <h4>₹249</h4>
+
+      <button onclick="addToCart('Cold Coffee',249)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/latte.jpeg">
+
+      <h3>Latte</h3>
+
+      <p>
+        Smooth creamy latte with rich aroma.
+      </p>
+
+      <h4>₹229</h4>
+
+      <button onclick="addToCart('Latte',229)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/mocha.jpeg">
+
+      <h3>Mocha</h3>
+
+      <p>
+        Chocolate flavored creamy coffee delight.
+      </p>
+
+      <h4>₹259</h4>
+
+      <button onclick="addToCart('Mocha',259)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/espresso.jpeg">
+
+      <h3>Espresso</h3>
+
+      <p>
+        Strong bold classic espresso shot.
+      </p>
+
+      <h4>₹179</h4>
+
+      <button onclick="addToCart('Espresso',179)">
+        Buy Now
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- CAKES -->
+
+  <h2 class="category-title">Cakes & Desserts</h2>
+
+  <div class="menu-container">
+
+    <div class="card">
+
+      <img src="images/cake.jpeg">
+
+      <h3>Chocolate Cake</h3>
+
+      <p>
+        Soft and delicious dark chocolate cake.
+      </p>
+
+      <h4>₹299</h4>
+
+      <button onclick="addToCart('Chocolate Cake',299)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/brownie.jpeg">
+
+      <h3>Brownie</h3>
+
+      <p>
+        Warm gooey chocolate brownie.
+      </p>
+
+      <h4>₹149</h4>
+
+      <button onclick="addToCart('Brownie',149)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/redvelvet.jpeg">
+
+      <h3>Red Velvet Cake</h3>
+
+      <p>
+        Classic red velvet cream delight.
+      </p>
+
+      <h4>₹349</h4>
+
+      <button onclick="addToCart('Red Velvet Cake',349)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/cheesecake.jpeg">
+
+      <h3>Cheesecake</h3>
+
+      <p>
+        Creamy cheesecake with biscuit crust.
+      </p>
+
+      <h4>₹329</h4>
+
+      <button onclick="addToCart('Cheesecake',329)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/croissant.jpeg">
+
+      <h3>Croissant</h3>
+
+      <p>
+        Fresh buttery French pastry.
+      </p>
+
+      <h4>₹129</h4>
+
+      <button onclick="addToCart('Croissant',129)">
+        Buy Now
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- MILKSHAKES -->
+
+  <h2 class="category-title">Milkshakes</h2>
+
+  <div class="menu-container">
+
+    <div class="card">
+
+      <img src="images/oreo.jpeg">
+
+      <h3>Oreo Shake</h3>
+
+      <p>
+        Creamy Oreo milkshake delight.
+      </p>
+
+      <h4>₹269</h4>
+
+      <button onclick="addToCart('Oreo Shake',269)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/strawberry.jpeg">
+
+      <h3>Strawberry Shake</h3>
+
+      <p>
+        Fresh strawberry flavored milkshake.
+      </p>
+
+      <h4>₹239</h4>
+
+      <button onclick="addToCart('Strawberry Shake',239)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/vanilla.jpeg">
+
+      <h3>Vanilla Shake</h3>
+
+      <p>
+        Classic creamy vanilla milkshake.
+      </p>
+
+      <h4>₹219</h4>
+
+      <button onclick="addToCart('Vanilla Shake',219)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/chocolate.jpeg">
+
+      <h3>Chocolate Shake</h3>
+
+      <p>
+        Rich chocolate blended milkshake.
+      </p>
+
+      <h4>₹259</h4>
+
+      <button onclick="addToCart('Chocolate Shake',259)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/matcha.jpeg">
+
+      <h3>Matcha
+</h3>
+
+      <p>
+        Sweet matcha delight.
+      </p>
+
+      <h4>₹229</h4>
+
+      <button onclick="addToCart('Matcha',229)">
+        Buy Now
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- OUR SPECIAL MENU -->
+
+  <h2 class="category-title">Our Special Menu</h2>
+
+  <div class="menu-container">
+
+    <div class="card">
+
+      <img src="images/coffee1.jpeg">
+
+      <h3>Cappuccino</h3>
+
+      <p>
+        Rich espresso with creamy milk foam.
+      </p>
+
+      <h4>₹199</h4>
+
+      <button onclick="addToCart('Cappuccino',199)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/coffee2.jpeg">
+
+      <h3>Cold Coffee</h3>
+
+      <p>
+        Refreshing iced coffee with chocolate flavor.
+      </p>
+
+      <h4>₹249</h4>
+
+      <button onclick="addToCart('Cold Coffee',249)">
+        Buy Now
+      </button>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="images/cake.jpeg">
+
+      <h3>Chocolate Cake</h3>
+
+      <p>
+        Soft and delicious dark chocolate cake.
+      </p>
+
+      <h4>₹299</h4>
+
+      <button onclick="addToCart('Chocolate Cake',299)">
+        Buy Now
+      </button>
+
+    </div>
+ <div class="card">
+
+      <img src="images/matcha.jpeg">
+
+      <h3>Matcha
+</h3>
+
+      <p>
+        Sweet matcha delight.
+      </p>
+
+      <h4>₹229</h4>
+
+      <button onclick="addToCart('Matcha',229)">
+        Buy Now
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <h2 class="title">Gallery</h2>
+
+    <div class="gallery-container">
+
+      <img src="images/gallery1.jpeg">
+      <img src="images/gallery2.jpeg">
+      <img src="images/gallery3.jpeg">
+      <img src="images/gallery4.jpeg">
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="title">About Us</h2>
+
+    <div class="about-content">
+
+      <p>
+        Moonlight Café is a cozy place designed for coffee lovers,
+        night thinkers, and peaceful conversations.
+        We serve fresh coffee, delicious desserts,
+        and unforgettable vibes every evening.
+      </p>
+
+    </div>
+
+  </section>
+<!-- OPENING HOURS -->
+
+<section id="hours">
+
+  <h2 class=" hours-title">Opening Hours</h2>
+
+  <div class="contact-content">
+
+    <p>Monday - Friday : 9 AM - 10 PM</p>
+
+    <p>Saturday : 10 AM - 12 AM</p>
+
+    <p>Sunday : 10 AM - 11 PM</p>
+
+  </div>
+
+</section>
+
+  <!-- REVIEWS -->
+
+  <section id="reviews">
+
+    <h2 class="title">Customer Reviews</h2>
+
+    <div class="menu-container">
+
+      <div class="card">
+        <h3>Priya</h3>
+
+        <p>
+          "Best coffee and peaceful atmosphere!"
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Rahul</h3>
+
+        <p>
+          "Loved the desserts and aesthetic vibe."
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Ananya</h3>
+
+        <p>
+          "Perfect place to relax and spend evenings."
+        </p>
+      </div>
+ <div class="card">
+        <h3>Arjun</h3>
+
+        <p>
+          "Amazing coffee and cozy ambience.Loved the vibe!"
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+<!-- CART -->
+
+<section id="cart">
+
+  <h2 class="title">Your Cart</h2>
+
+  <div class="card">
+
+    <ul id="cart-items"></ul>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <br>
+
+    <button id="payBtn">
+      Proceed To Pay
+    </button>
+
+  </div>
+
+</section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="title">Contact Us</h2>
+
+    <div class="contact-content">
+
+      <p>Email: moonlightcafe@gmail.com</p>
+
+      <p>Phone: +91 9876543210</p>
+
+      <p>Location: Vizag, Andhra Pradesh</p>
+
+    </div>
+
+  </section>
+
+  <!-- SOCIAL LINKS -->
+
+  <div class="socials">
+
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Moonlight Café | All Rights Reserved
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
