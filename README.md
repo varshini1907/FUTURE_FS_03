@@ -2,7 +2,7 @@ Moonlight Cafe Website
 
 Moonlight Cafe is a modern and responsive café-themed website designed to create a cozy and aesthetic user experience. The project focuses on clean UI design, smooth navigation, and an elegant café-inspired layout.
 
-🔗 Live Demo : https://cafee-moonlight.netlify.app/
+🔗 Live Demo : https://moonlight-caf.netlify.app/
 
 📌 Features
 - Responsive Design
